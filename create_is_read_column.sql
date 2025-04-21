@@ -1,0 +1,1 @@
+ALTER TABLE messages ADD COLUMN is_read TINYINT(1) DEFAULT 0;
