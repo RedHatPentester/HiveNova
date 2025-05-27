@@ -2,7 +2,7 @@
 
 CREATE DATABASE IF NOT EXISTS hivenova;
 
-CREATE USER 'vulnuser'@'localhost' IDENTIFIED BY 'vulnpassword';
+CREATE USER IF NOT EXISTS 'vulnuser'@'localhost' IDENTIFIED BY 'vulnpassword';
 
 GRANT ALL PRIVILEGES ON hivenova.* TO 'vulnuser'@'localhost';
 
@@ -10,18 +10,14 @@ FLUSH PRIVILEGES;
 
 USE hivenova;
 
-DROP TABLE IF EXISTS users;
-
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(100) NOT NULL,
     role VARCHAR(50) NOT NULL
 );
 
-DROP TABLE IF EXISTS staff;
-
-CREATE TABLE staff (
+CREATE TABLE IF NOT EXISTS staff (
     UUID VARCHAR(36) PRIMARY KEY,
     Name VARCHAR(255),
     Role VARCHAR(50),
@@ -30,9 +26,7 @@ CREATE TABLE staff (
     password VARCHAR(100)
 );
 
-DROP TABLE IF EXISTS patient_records;
-
-CREATE TABLE patient_records (
+CREATE TABLE IF NOT EXISTS patient_records (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
     Name VARCHAR(255),

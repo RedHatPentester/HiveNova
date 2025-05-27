@@ -103,9 +103,13 @@ for sql_file in "${SQL_FILES[@]}"; do
     if [ -f "$sql_file" ]; then
         echo -e "\033[33mImporting $sql_file...\033[0m"
         if [ -n "$MYSQL_ROOT_PASS" ]; then
-            mysql -u root -p"$MYSQL_ROOT_PASS" $DB_NAME < "$sql_file" || echo -e "\033[33mWarning: Error importing $sql_file, continuing...\033[0m"
+            mysql -u root -p"$MYSQL_ROOT_PASS" $DB_NAME < "$sql_file" || {
+                echo -e "\033[33mWarning: Error importing $sql_file, continuing...\033[0m"
+            }
         else
-            mysql $DB_NAME < "$sql_file" || echo -e "\033[33mWarning: Error importing $sql_file, continuing...\033[0m"
+            mysql $DB_NAME < "$sql_file" || {
+                echo -e "\033[33mWarning: Error importing $sql_file, continuing...\033[0m"
+            }
         fi
     else
         echo -e "\033[31mSQL file $sql_file not found!\033[0m"
