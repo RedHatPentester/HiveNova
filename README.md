@@ -47,13 +47,13 @@ Ready to join the hive? Here's how to get started:
 1. Clone this repo:  
    ```bash
    git clone https://github.com/RedHatPentester/HiveNova
-   cd hivenova_web_app
+   cd HiveNova
    ```
 
 
 2. Run the setup script to configure the environment:  
    ```bash
-   ./setup.sh
+   sudo ./setup.sh
    ```
 
 3. Start the app by running:  
