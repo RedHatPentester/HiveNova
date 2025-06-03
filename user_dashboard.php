@@ -85,33 +85,24 @@ if (isset($_GET['action']) && $_GET['action'] === 'get_recent_chats') {
     exit();
 }
 
-<<<<<<< HEAD
-=======
 if ($conn->connect_error) {
     error_log("Database connection failed: " . $conn->connect_error);
     die("Connection failed: " . $conn->connect_error);
 }
 
->>>>>>> db2302c (Fixed some Issues)
 // Handle fetching doctors for new chat
 if (isset($_GET['action']) && $_GET['action'] === 'get_doctors') {
     $docs = [];
     $doctor_result = $conn->query("SELECT Name FROM staff WHERE LOWER(TRIM(Role)) = 'doctor'");
-<<<<<<< HEAD
-=======
     if (!$doctor_result) {
         error_log("Doctor query failed: " . $conn->error);
     }
->>>>>>> db2302c (Fixed some Issues)
     if ($doctor_result && $doctor_result->num_rows > 0) {
         while ($doc = $doctor_result->fetch_assoc()) {
             $docs[] = ['name' => $doc['Name']];
         }
-<<<<<<< HEAD
-=======
     } else {
         error_log("No doctors found in staff table.");
->>>>>>> db2302c (Fixed some Issues)
     }
     header('Content-Type: application/json');
     echo json_encode($docs);

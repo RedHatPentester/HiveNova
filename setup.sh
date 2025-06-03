@@ -97,10 +97,7 @@ SQL_FILES=(
     "create_is_read_column.sql"
     "create_lab_tables.sql"
     "create_appointment_schedules_table.sql"
-<<<<<<< HEAD
-=======
     "hospital_staff.sql"
->>>>>>> db2302c (Fixed some Issues)
 )
 
 for sql_file in "${SQL_FILES[@]}"; do

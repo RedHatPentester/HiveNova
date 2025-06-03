@@ -18,10 +18,7 @@ body {
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(8px);
-<<<<<<< HEAD
-=======
     padding-bottom: 80px;
->>>>>>> db2302c (Fixed some Issues)
 }
 
 .left-panel {
@@ -78,21 +75,12 @@ body {
 
 .right-panel {
     width: 440px;
-<<<<<<< HEAD
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 30px;
-    margin: 80px 60px;
-    padding: 50px 45px;
-=======
     /* background: rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px); */
     /* border-radius: 30px; */
     margin: 80px 60px;
     padding: 50px 5px;
->>>>>>> db2302c (Fixed some Issues)
     box-shadow: 0 0 50px #00ff00, 0 0 100px #008000;
     display: flex;
     flex-direction: column;
@@ -108,8 +96,6 @@ body {
     width: 100%;
     text-align: center;
     color: white;
-<<<<<<< HEAD
-=======
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
@@ -145,7 +131,6 @@ body {
     font-weight: 700;
     margin-bottom: 15px;
     text-shadow: 0 0 5px #ff0000;
->>>>>>> db2302c (Fixed some Issues)
 }
 
 .login-container h2 {
